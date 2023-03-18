@@ -13,11 +13,12 @@
 ActiveRecord::Schema.define(version: 2021_05_04_154240) do
 
   create_table "authors", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", null: true
+    t.string "email", null: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+  
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
